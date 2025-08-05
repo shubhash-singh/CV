@@ -3,221 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhash Singh - Full Stack Developer</title>
+    <title>Shubhash Singh - Android Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
-    <div class="min-h-screen">
-        <!-- Header/Intro Section -->
+    <div class="container">
+        <!-- Header Section -->
         <header class="header">
-            <div class="header-gradient"></div>
             <div class="header-content">
-                <div class="container">
-                    <div class="header-intro" data-aos="fade-up">
-                        <div class="logo-container animate-pulse">
-                            <i data-lucide="terminal" class="logo-icon"></i>
-                        </div>
-                        <div>
-                            <h1 class="gradient-text">Shubhash Singh</h1>
-                            <p class="subtitle">Back-End & Android Developer</p>
-                            <p class="bio">Aspiring software developer and computer science enthusiast specializing in Java, Spring Boot, and MongoDB. Passionate about Android development and problem-solving through platforms like LeetCode and HackerRank.</p>
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <div class="profile-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
                         </div>
                     </div>
-                    <div class="header-links" data-aos="fade-up" data-aos-delay="200">
-                        <a href="mailto:shubhashsingh2059@gmail.com" class="btn btn-glass">
-                            <i data-lucide="mail"></i>
-                            <span>Contact Me</span>
-                        </a>
-                        <a href="https://github.com/shubhash-singh" class="btn btn-glass">
-                            <i data-lucide="github"></i>
-                            <span>GitHub</span>
-                        </a>
+                    <div class="profile-info">
+                        <h1 class="name">Shubhash Singh</h1>
+                        <p class="title">Android Developer & CS Engineering Student</p>
+                        <p class="subtitle">Passionate about building scalable mobile applications</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>subhashdingh2059@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+91 9381560406</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                        <a href="https://github.com/shubhash-singh" target="_blank">GitHub Profile</a>
                     </div>
                 </div>
             </div>
         </header>
 
-        <main class="container">
-            <!-- Technical Skills -->
-            <section class="section" data-aos="fade-up">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <i data-lucide="cpu"></i>
-                    </div>
-                    <h2>Technical Skills</h2>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Professional Summary -->
+            <section class="section summary-section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="section-content">
+                    <p class="summary-text">
+                        Passionate Android developer with hands-on experience in building scalable, real-time mobile applications using Kotlin, Java, Android Studio, Firebase, and Room DB. Strong foundation in Data Structures, API development, and cross-language integration using Python-Java bridges. Adept in creating clean UI/UX experiences and efficient backends.
+                    </p>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="skill-header">
-                            <i data-lucide="code-2"></i>
-                            <h3>Core Skills</h3>
+            </section>
+
+            <!-- Experience -->
+            <section class="section experience-section">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h3 class="job-title">Android Developer Intern</h3>
+                                <h4 class="company">PADAAMS Innovative Technolabs Pvt. Ltd.</h4>
+                            </div>
+                            <div class="experience-date">Aug 2025 – Present</div>
                         </div>
-                        <ul class="skill-list">
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Java</li>
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Python</li>
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Data Structures & Algorithms</li>
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Problem Solving</li>
+                        <ul class="experience-details">
+                            <li>Built and maintained the <strong>NCERT Learning App</strong> supporting <strong>1M+ users</strong> with modules for Quiz, Chatbot, Chapter View, and Gamification Dashboard</li>
+                            <li>Integrated <strong>SymPy via Python-Java bridge</strong> for solving symbolic math expressions offline</li>
+                            <li>Implemented <strong>Google ML Kit OCR</strong> for extracting educational content from images locally</li>
+                            <li>Used <strong>Firebase Auth</strong> for secure login (Email/OTP) and <strong>Firestore</strong> for real-time data sync</li>
+                            <li>Architected the app with <strong>Room DB</strong> for offline caching and scalable modular code</li>
                         </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android Studio</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Room DB</span>
+                            <span class="tech-tag">Google ML Kit</span>
+                            <span class="tech-tag">SymPy</span>
+                        </div>
                     </div>
-                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="skill-header">
-                            <i data-lucide="smartphone"></i>
-                            <h3>Mobile Development</h3>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h3 class="job-title">Freelance Web Developer</h3>
+                                <h4 class="company">Dhrishata Educational Foundation</h4>
+                            </div>
+                            <div class="experience-date">May 2025 – Jun 2025</div>
                         </div>
-                        <ul class="skill-list">
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Android Development</li>
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Firebase Integration</li>
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>UI/UX Design</li>
+                        <ul class="experience-details">
+                            <li>Designed and deployed complete <strong>NGO website</strong> with HTML, CSS, SEO, and Google integrations</li>
+                            <li>Integrated Team, Mission, Gallery, and Contact modules with responsive design</li>
+                            <li>Enhanced <strong>donor engagement by 25%</strong> via performance and mobile optimization</li>
+                            <li>Handled end-to-end development including domain registration and email setup</li>
                         </ul>
-                    </div>
-                    <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="skill-header">
-                            <i data-lucide="globe"></i>
-                            <h3>Web Development</h3>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">Responsive Design</span>
                         </div>
-                        <ul class="skill-list">
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>Spring Boot</li>
-                            <li class="animate-skill"><i data-lucide="check-circle"></i>MongoDB</li>
-                        </ul>
                     </div>
                 </div>
             </section>
 
             <!-- Projects -->
-            <section class="section" data-aos="fade-up">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <i data-lucide="terminal"></i>
-                    </div>
-                    <h2>Featured Projects</h2>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card" data-aos="fade-right">
-                        <div class="project-header">
-                            <i data-lucide="wallet"></i>
-                            <h3>Budget Tracker Application</h3>
+            <section class="section projects-section">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-content">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">Budget Tracker Application</h3>
+                                <a href="https://github.com/shubhash-singh/Budget_Tracker_Application" class="project-link" target="_blank">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="project-description">
+                                Kotlin-based expense tracking app built with MVVM architecture, Room, and Firebase Firestore. Features monthly visual reports, expense categories, and intuitive navigation using fragments.
+                            </p>
+                            <ul class="project-features">
+                                <li>Handles <strong>2000+ monthly transactions</strong> across users</li>
+                                <li>Real-time visualizations with dynamic charting</li>
+                                <li>Clean Material Design UI with fragment management</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">MVVM</span>
+                                <span class="tech-tag">Room DB</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
                         </div>
-                        <p>
-                            An online application enabling users to monitor their budgets and expenses, 
-                            utilizing Firebase Firestore for data storage.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Android</span>
-                            <span class="tag">Java</span>
-                        </div>
-                        <a href="https://github.com/shubhash-singh/Budget_Tracker_Application" class="project-link">
-                            <i data-lucide="github"></i>
-                            View Project
-                        </a>
-                    </div>
 
-                    <div class="project-card" data-aos="fade-left">
-                        <div class="project-header">
-                            <i data-lucide="split"></i>
-                            <h3>SplitWise Clone</h3>
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">SplitWise Clone</h3>
+                                <a href="https://github.com/shubhash-singh/SplitWise" class="project-link" target="_blank">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                            <p class="project-description">
+                                Shared expense tracking application developed in Java & Android Studio with Firebase backend. Allows creation of shared rooms and tracks individual expenses with auto-splitting.
+                            </p>
+                            <ul class="project-features">
+                                <li>Live sync for shared expense tracking</li>
+                                <li><strong>Reduced calculation errors by 40%</strong> via input validation</li>
+                                <li>Category-based expense classification</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">Firebase Auth</span>
+                                <span class="tech-tag">Firestore</span>
+                            </div>
                         </div>
-                        <p>
-                            A replication of the SplitWise application, designed to manage shared expenses among users.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Android</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                        <a href="https://github.com/shubhash-singh/SplitWise" class="project-link">
-                            <i data-lucide="github"></i>
-                            View Project
-                        </a>
-                    </div>
-
-                    <div class="project-card" data-aos="fade-right">
-                        <div class="project-header">
-                            <i data-lucide="code"></i>
-                            <h3>LeetCode Solutions</h3>
-                        </div>
-                        <p>
-                            A repository containing solutions to various LeetCode problems, demonstrating proficiency 
-                            in data structures and algorithms.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">DSA</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">Problem Solving</span>
-                        </div>
-                        <a href="https://github.com/shubhash-singh/LeetCode" class="project-link">
-                            <i data-lucide="github"></i>
-                            View Solutions
-                        </a>
-                    </div>
-
-                    <div class="project-card" data-aos="fade-left">
-                        <div class="project-header">
-                            <i data-lucide="code-2"></i>
-                            <h3>HackerRank Python Solutions</h3>
-                        </div>
-                        <p>
-                            A collection of Python solutions for HackerRank challenges, showcasing problem-solving capabilities.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Algorithms</span>
-                            <span class="tag">Problem Solving</span>
-                        </div>
-                        <a href="github.com" class="project-link">
-                            <i data-lucide="github"></i>
-                            View Solutions
-                        </a>
                     </div>
                 </div>
             </section>
 
-            <!-- Contact -->
-            <section class="section" data-aos="fade-up">
-                <div class="section-header">
-                    <div class="section-icon">
-                        <i data-lucide="mail"></i>
+            <!-- Skills & Education Grid -->
+            <div class="two-column-grid">
+                <!-- Skills -->
+                <section class="section skills-section">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-content">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Kotlin</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">Python</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Mobile Development</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Android Studio</span>
+                                    <span class="skill-tag">Jetpack</span>
+                                    <span class="skill-tag">Room DB</span>
+                                    <span class="skill-tag">MVVM</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Backend & Database</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Firebase</span>
+                                    <span class="skill-tag">Firestore</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Tools & Libraries</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">GitHub</span>
+                                    <span class="skill-tag">Postman</span>
+                                    <span class="skill-tag">Google ML Kit</span>
+                                    <span class="skill-tag">SymPy</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Get In Touch</h2>
-                </div>
-                <div class="contact-card" data-aos="zoom-in">
-                    <p>
-                        I'm always interested in hearing about new projects and opportunities.
-                        Feel free to reach out if you'd like to connect!
-                    </p>
-                    <div class="contact-buttons">
-                        <a href="mailto:subhashsingh2059@gmail.com" class="btn btn-primary">
-                            <i data-lucide="mail"></i>
-                            Email Me
-                        </a>
-                        <a href="https://github.com/shubhash-singh" class="btn btn-secondary">
-                            <i data-lucide="github"></i>
-                            GitHub Profile
-                        </a>
+                </section>
+
+                <!-- Education -->
+                <section class="section education-section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-content">
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h3 class="degree">B.Tech in Computer Science and Engineering</h3>
+                                <div class="education-date">2022 – 2026</div>
+                            </div>
+                            <h4 class="institution">Sri Venkateswara College of Engineering and Technology</h4>
+                            <p class="education-details">
+                                <strong>CGPA: 8.0</strong> • Andhra Pradesh
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Certifications -->
+            <section class="section certifications-section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-content">
+                    <div class="certifications-grid">
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-title">Java (5-star)</h4>
+                                <p class="certification-issuer">HackerRank</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-title">Python (5-star)</h4>
+                                <p class="certification-issuer">HackerRank</p>
+                            </div>
+                        </div>
+                        <div class="certification-item">
+                            <div class="certification-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14,2 14,8 20,8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10,9 9,9 8,9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="certification-content">
+                                <h4 class="certification-title">Java Developer</h4>
+                                <p class="certification-issuer">L&T EduTech</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <div class="container">
-                <p>© 2025 Shubhash Singh. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Shubhash Singh. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/shubhash-singh" target="_blank">GitHub</a>
+                    <span>•</span>
+                    <a href="mailto:subhashdingh2059@gmail.com">Email</a>
+                </div>
             </div>
         </footer>
     </div>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
