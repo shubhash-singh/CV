@@ -1,313 +1,827 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhash Singh - Android Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Shubhash Singh - Android Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Shubhash Singh - Aspiring Android Developer & Software Engineer from Bangaluru. Explore my projects and skills in Android development, Java, Kotlin, and more.">
+    <meta property="og:title" content="Shubhash Singh - Android Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Shubhash Singh - Android Developer & Software Engineer">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="header-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <div class="profile-placeholder">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="12" cy="7" r="4"></circle>
-                            </svg>
-                        </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="navbar-logo">
+                <span class="logo-icon">💻</span>
+                <span>Shubhash Singh</span>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="container">
+            <div class="home-grid">
+                <div class="home-content">
+                    <h2 class="greeting">Hello, I'm</h2>
+                    <h1 class="main-title">Shubhash Singh</h1>
+                    <h3 class="subtitle">Android Developer & Software Engineer</h3>
+                    <p class="intro-text">
+                        Aspiring Software Developer. Passionate about building innovative
+                        Android applications and solving complex algorithmic problems.
+                    </p>
+                    <div class="action-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work →
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Get in Touch
+                        </a>
                     </div>
-                    <div class="profile-info">
-                        <h1 class="name">Shubhash Singh</h1>
-                        <p class="title">Android Developer & CS Engineering Student</p>
-                        <p class="subtitle">Passionate about building scalable mobile applications</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/shubhash-singh" target="_blank" rel="noopener noreferrer"
+                            class="social-link" title="GitHub">
+                            <span class="icon">🐙</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shubhash-singh-124254215" target="_blank"
+                            rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                            <span class="icon">💼</span>
+                        </a>
+                        <a href="https://leetcode.com/Shubhash_Singh" target="_blank" rel="noopener noreferrer"
+                            class="social-link" title="LeetCode">
+                            <span class="icon">💻</span>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>subhashdingh2059@gmail.com</span>
+                <div class="home-visual">
+                    <div class="visual-box">
+                        <div class="code-icon">
+                            <img src="ragnar_pic.jpg" alt="Code Icon">
+                        </div>
+                        <div class="visual-footer">
+                            <p>Building the Future</p>
+                            <p class="small">One App at a Time</p>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        <span>+91 9381560406</span>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
-                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                        </svg>
-                        <a href="https://github.com/shubhash-singh" target="_blank">GitHub Profile</a>
+                    <div class="stats-card">
+                        <p class="big-number">31+</p>
+                        <p class="stat-label">Repositories</p>
                     </div>
                 </div>
             </div>
-        </header>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Professional Summary -->
-            <section class="section summary-section">
-                <h2 class="section-title">Professional Summary</h2>
-                <div class="section-content">
-                    <p class="summary-text">
-                        Passionate Android developer with hands-on experience in building scalable, real-time mobile applications using Kotlin, Java, Android Studio, Firebase, and Room DB. Strong foundation in Data Structures, API development, and cross-language integration using Python-Java bridges. Adept in creating clean UI/UX experiences and efficient backends.
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <p class="stat-value">15+</p>
+                    <p class="stat-text">Projects</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-value">5+</p>
+                    <p class="stat-text">Technologies</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-value">15</p>
+                    <p class="stat-text">Followers</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-value">100%</p>
+                    <p class="stat-text">Dedication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-header">
+            <h1>About Me</h1>
+            <p>Aspiring Software Developer | Computer Science Enthusiast</p>
+        </div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>My Journey</h2>
+                    <p>
+                        Hello! I'm Shubhash Singh, an aspiring software developer.
+                        My journey in technology began with a passion for creating solutions that make
+                        a difference in people's lives.
+                    </p>
+                    <p>
+                        I specialize in Android development, working with Java and Kotlin to build
+                        intuitive and powerful mobile applications. Beyond mobile development, I have
+                        a strong foundation in data structures, algorithms, and backend development.
+                    </p>
+                    <p>
+                        I'm constantly learning and evolving, staying up-to-date with the latest
+                        technologies and best practices. My goal is to create impactful software
+                        solutions that solve real-world problems.
                     </p>
                 </div>
-            </section>
-
-            <!-- Experience -->
-            <section class="section experience-section">
-                <h2 class="section-title">Experience</h2>
-                <div class="section-content">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="experience-title-group">
-                                <h3 class="job-title">Android Developer Intern</h3>
-                                <h4 class="company">PADAAMS Innovative Technolabs Pvt. Ltd.</h4>
-                            </div>
-                            <div class="experience-date">Aug 2025 – Present</div>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Built and maintained the <strong>NCERT Learning App</strong> supporting <strong>1M+ users</strong> with modules for Quiz, Chatbot, Chapter View, and Gamification Dashboard</li>
-                            <li>Integrated <strong>SymPy via Python-Java bridge</strong> for solving symbolic math expressions offline</li>
-                            <li>Implemented <strong>Google ML Kit OCR</strong> for extracting educational content from images locally</li>
-                            <li>Used <strong>Firebase Auth</strong> for secure login (Email/OTP) and <strong>Firestore</strong> for real-time data sync</li>
-                            <li>Architected the app with <strong>Room DB</strong> for offline caching and scalable modular code</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Kotlin</span>
-                            <span class="tech-tag">Android Studio</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Room DB</span>
-                            <span class="tech-tag">Google ML Kit</span>
-                            <span class="tech-tag">SymPy</span>
-                        </div>
+                <div class="about-card">
+                    <h3>Quick Facts</h3>
+                    <div class="fact-item">
+                        <strong>Experience</strong>
+                        <p>Android Development, Backend Systems, Data Analysis</p>
                     </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="experience-title-group">
-                                <h3 class="job-title">Freelance Web Developer</h3>
-                                <h4 class="company">Dhrishata Educational Foundation</h4>
-                            </div>
-                            <div class="experience-date">May 2025 – Jun 2025</div>
-                        </div>
-                        <ul class="experience-details">
-                            <li>Designed and deployed complete <strong>NGO website</strong> with HTML, CSS, SEO, and Google integrations</li>
-                            <li>Integrated Team, Mission, Gallery, and Contact modules with responsive design</li>
-                            <li>Enhanced <strong>donor engagement by 25%</strong> via performance and mobile optimization</li>
-                            <li>Handled end-to-end development including domain registration and email setup</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">SEO</span>
-                            <span class="tech-tag">Responsive Design</span>
-                        </div>
+                    <div class="fact-item">
+                        <strong>Languages</strong>
+                        <p>Java, Kotlin, Python, C++</p>
+                    </div>
+                    <div class="fact-item">
+                        <strong>Focus Areas</strong>
+                        <p>Android, Algorithms, Full-Stack Development</p>
+                    </div>
+                    <div class="fact-item">
+                        <strong>Current Goal</strong>
+                        <p>Building innovative solutions and mastering system design</p>
                     </div>
                 </div>
-            </section>
-
-            <!-- Projects -->
-            <section class="section projects-section">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="section-content">
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">Budget Tracker Application</h3>
-                                <a href="https://github.com/shubhash-singh/Budget_Tracker_Application" class="project-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
-                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                                    </svg>
-                                </a>
-                            </div>
-                            <p class="project-description">
-                                Kotlin-based expense tracking app built with MVVM architecture, Room, and Firebase Firestore. Features monthly visual reports, expense categories, and intuitive navigation using fragments.
-                            </p>
-                            <ul class="project-features">
-                                <li>Handles <strong>2000+ monthly transactions</strong> across users</li>
-                                <li>Real-time visualizations with dynamic charting</li>
-                                <li>Clean Material Design UI with fragment management</li>
-                            </ul>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Kotlin</span>
-                                <span class="tech-tag">MVVM</span>
-                                <span class="tech-tag">Room DB</span>
-                                <span class="tech-tag">Firebase</span>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-header">
-                                <h3 class="project-title">SplitWise Clone</h3>
-                                <a href="https://github.com/shubhash-singh/SplitWise" class="project-link" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 19c-5 0-8-3-8-8s3-8 8-8 8 3 8 8-3 8-8 8z"></path>
-                                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                                    </svg>
-                                </a>
-                            </div>
-                            <p class="project-description">
-                                Shared expense tracking application developed in Java & Android Studio with Firebase backend. Allows creation of shared rooms and tracks individual expenses with auto-splitting.
-                            </p>
-                            <ul class="project-features">
-                                <li>Live sync for shared expense tracking</li>
-                                <li><strong>Reduced calculation errors by 40%</strong> via input validation</li>
-                                <li>Category-based expense classification</li>
-                            </ul>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Android Studio</span>
-                                <span class="tech-tag">Firebase Auth</span>
-                                <span class="tech-tag">Firestore</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills & Education Grid -->
-            <div class="two-column-grid">
-                <!-- Skills -->
-                <section class="section skills-section">
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <div class="section-content">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4 class="skill-category-title">Languages</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Kotlin</span>
-                                    <span class="skill-tag">Java</span>
-                                    <span class="skill-tag">Python</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4 class="skill-category-title">Mobile Development</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Android Studio</span>
-                                    <span class="skill-tag">Jetpack</span>
-                                    <span class="skill-tag">Room DB</span>
-                                    <span class="skill-tag">MVVM</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4 class="skill-category-title">Backend & Database</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Firebase</span>
-                                    <span class="skill-tag">Firestore</span>
-                                    <span class="skill-tag">REST APIs</span>
-                                    <span class="skill-tag">MongoDB</span>
-                                </div>
-                            </div>
-                            <div class="skill-category">
-                                <h4 class="skill-category-title">Tools & Libraries</h4>
-                                <div class="skill-tags">
-                                    <span class="skill-tag">Git</span>
-                                    <span class="skill-tag">GitHub</span>
-                                    <span class="skill-tag">Postman</span>
-                                    <span class="skill-tag">Google ML Kit</span>
-                                    <span class="skill-tag">SymPy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Education -->
-                <section class="section education-section">
-                    <h2 class="section-title">Education</h2>
-                    <div class="section-content">
-                        <div class="education-item">
-                            <div class="education-header">
-                                <h3 class="degree">B.Tech in Computer Science and Engineering</h3>
-                                <div class="education-date">2022 – 2026</div>
-                            </div>
-                            <h4 class="institution">Sri Venkateswara College of Engineering and Technology</h4>
-                            <p class="education-details">
-                                <strong>CGPA: 8.0</strong> • Andhra Pradesh
-                            </p>
-                        </div>
-                    </div>
-                </section>
             </div>
 
-            <!-- Certifications -->
-            <section class="section certifications-section">
-                <h2 class="section-title">Certifications</h2>
-                <div class="section-content">
-                    <div class="certifications-grid">
-                        <div class="certification-item">
-                            <div class="certification-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                            </div>
-                            <div class="certification-content">
-                                <h4 class="certification-title">Java (5-star)</h4>
-                                <p class="certification-issuer">HackerRank</p>
-                            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">📱</div>
+                    <h3>Android Development</h3>
+                    <p>Specialized in building native Android applications using Java and Kotlin</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">📚</div>
+                    <h3>Computer Science Student</h3>
+                    <p>Pursuing excellence in computer science with focus on algorithms and data structures</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🎯</div>
+                    <h3>Problem Solver</h3>
+                    <p>Active on LeetCode and HackerRank, constantly improving algorithmic skills</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">👥</div>
+                    <h3>Open Source Contributor</h3>
+                    <p>Contributing to open-source projects and sharing knowledge with the community</p>
+                </div>
+            </div>
+
+            <div class="education-achievements">
+                <div class="education-box">
+                    <h2>Education</h2>
+                    <div class="edu-item">
+                        <h3>Computer Science</h3>
+                        <p class="edu-institution">Currently Pursuing</p>
+                        <p class="edu-description">Focus on software engineering, algorithms, and mobile development</p>
+                    </div>
+                </div>
+                <div class="achievements-box">
+                    <h2>Achievements</h2>
+                    <ul class="achievements-list">
+                        <li>Pull Shark badge on GitHub</li>
+                        <li>Active problem solver on LeetCode</li>
+                        <li>Built 31+ repositories on GitHub</li>
+                        <li>Contributed to multiple open-source projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="section-header">
+            <h1>Skills & Expertise</h1>
+            <p>Technologies and tools I use to bring ideas to life</p>
+        </div>
+        <div class="container">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📱 Android Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Java</span>
+                            <span>90%</span>
                         </div>
-                        <div class="certification-item">
-                            <div class="certification-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                </svg>
-                            </div>
-                            <div class="certification-content">
-                                <h4 class="certification-title">Python (5-star)</h4>
-                                <p class="certification-issuer">HackerRank</p>
-                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
-                        <div class="certification-item">
-                            <div class="certification-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14,2 14,8 20,8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10,9 9,9 8,9"></polyline>
-                                </svg>
-                            </div>
-                            <div class="certification-content">
-                                <h4 class="certification-title">Java Developer</h4>
-                                <p class="certification-issuer">L&T EduTech</p>
-                            </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Kotlin</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Android Studio</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>XML Layouts</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2025 Shubhash Singh. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/shubhash-singh" target="_blank">GitHub</a>
-                    <span>•</span>
-                    <a href="mailto:subhashdingh2059@gmail.com">Email</a>
+                <div class="skill-category">
+                    <h3>💻 Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Java</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Python</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>C++</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Kotlin</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🗄️ Database & Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>SQLite</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Django</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>REST APIs</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>SQL</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>⚙️ Tools & Environment</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Git & GitHub</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>VS Code</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Linux</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Jupyter Notebook</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🎯 Problem Solving</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Data Structures</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Algorithms</span>
+                            <span>83%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 83%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>LeetCode</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>HackerRank</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Web Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>HTML</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>CSS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>JavaScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Web Development</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
 
-    <script src="script.js"></script>
+            <div class="tools-section">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-list">
+                    <span class="tool-tag">Android Studio</span>
+                    <span class="tool-tag">VS Code</span>
+                    <span class="tool-tag">Git</span>
+                    <span class="tool-tag">GitHub</span>
+                    <span class="tool-tag">Jupyter Notebook</span>
+                    <span class="tool-tag">Linux</span>
+                    <span class="tool-tag">Django</span>
+                    <span class="tool-tag">SQLite</span>
+                    <span class="tool-tag">Gradle</span>
+                    <span class="tool-tag">Maven</span>
+                </div>
+            </div>
+
+            <div class="skills-highlights">
+                <div class="highlight-box" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+                    <h3>Continuous Learning</h3>
+                    <p>Always expanding my skillset and staying updated with the latest technologies and best practices
+                    </p>
+                </div>
+                <div class="highlight-box" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+                    <h3>Problem Solving</h3>
+                    <p>Active on competitive programming platforms, constantly challenging myself with complex problems
+                    </p>
+                </div>
+                <div class="highlight-box" style="background: linear-gradient(135deg, #a855f7, #ec4899);">
+                    <h3>Team Player</h3>
+                    <p>Experienced in collaborating with teams and contributing to open-source projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="section-header">
+            <h1>My Projects</h1>
+            <p>A showcase of my work and contributions to the developer community</p>
+        </div>
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=600&h=400&fit=crop"
+                            alt="EduApp Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>EduApp</h3>
+                            <span class="project-tag">Android</span>
+                        </div>
+                        <p>A comprehensive educational application built with Kotlin, designed to enhance learning
+                            experiences with interactive features and seamless user interface.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Android</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 0</span>
+                            <a href="https://github.com/shubhash-singh" target="_blank">View Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop"
+                            alt="Budget Tracker Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>Budget Tracker</h3>
+                            <span class="project-tag">Android</span>
+                        </div>
+                        <p>A robust financial management tool built in Java that helps users track expenses, set
+                            budgets, and visualize spending patterns with intuitive charts.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Android</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 1</span>
+                            <a href="https://github.com/shubhash-singh/Budget_Tracker_Application" target="_blank">View
+                                Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop"
+                            alt="AttendeX Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>AttendeX</h3>
+                            <span class="project-tag">Android</span>
+                        </div>
+                        <p>A modern attendance tracking system built with Kotlin, featuring automated check-ins,
+                            real-time updates, and comprehensive reporting capabilities.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Android</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 0</span>
+                            <a href="https://github.com/shubhash-singh/AttendeX" target="_blank">View Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+                            alt="AgenticAI Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>AgenticAI</h3>
+                            <span class="project-tag">AI</span>
+                        </div>
+                        <p>An innovative AI system that creates HTML simulations from JSON concepts, automating the
+                            process of converting structured data into interactive visualizations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                            <span>AI</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 0</span>
+                            <a href="https://github.com/shubhash-singh/AgenticAI" target="_blank">View Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                            alt="Expense Manager Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>Expense Manager Suite</h3>
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <p>A complete expense management solution with both mobile app and backend API, offering
+                            real-time expense tracking and detailed analytics.</p>
+                        <div class="project-tech">
+                            <span>Kotlin</span>
+                            <span>Java</span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 0</span>
+                            <a href="https://github.com/shubhash-singh/Expense-Manager-App" target="_blank">View Code
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&h=400&fit=crop"
+                            alt="COVID-19 Analysis Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>COVID-19 Analysis</h3>
+                            <span class="project-tag">Data Science</span>
+                        </div>
+                        <p>A data science project analyzing COVID-19 trends with interactive visualizations and
+                            statistical insights using Python and Jupyter Notebook.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Jupyter</span>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 1</span>
+                            <a href="https://github.com/shubhash-singh/Covid-19_Analysis_and_Visualization"
+                                target="_blank">View Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+                            alt="AI Tutor Backend Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>AI Tutor App Backend</h3>
+                            <span class="project-tag">Backend</span>
+                        </div>
+                        <p>Backend system for an educational tutoring application powered by AI, providing intelligent
+                            learning recommendations and progress tracking.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 0</span>
+                            <a href="https://github.com/shubhash-singh/AI_Tutor_App_Backend" target="_blank">View Code
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
+                            alt="Banking Software Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>L&T Banking Software</h3>
+                            <span class="project-tag">Enterprise</span>
+                        </div>
+                        <p>A comprehensive banking system implementation with features for account management,
+                            transactions, and financial operations.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>SQL</span>
+                            <span>Database</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 1</span>
+                            <a href="https://github.com/shubhash-singh/LAndT_BankingSoftware" target="_blank">View Code
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop"
+                            alt="SymPy Utils Project">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-top">
+                            <h3>SymPy Utils</h3>
+                            <span class="project-tag">Utility</span>
+                        </div>
+                        <p>A mathematical solving tool with both GUI and CLI interfaces, utilizing SymPy library for
+                            symbolic mathematics and equation solving.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>SymPy</span>
+                            <span>GUI</span>
+                        </div>
+                        <div class="project-footer">
+                            <span>⭐ 0</span>
+                            <a href="https://github.com/shubhash-singh" target="_blank">View Code →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-cta">
+                <h2>Want to see more?</h2>
+                <p>Check out my GitHub profile for all my projects and contributions</p>
+                <a href="https://github.com/shubhash-singh" target="_blank" class="btn btn-primary">
+                    Visit GitHub Profile →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-header">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss your next project or collaboration opportunity</p>
+        </div>
+        <div class="container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>Bangaluru</p>
+                </div>
+                <div class="info-card">
+                    <h3>📧 Email</h3>
+                    <p>Contact via GitHub</p>
+                </div>
+                <div class="info-card">
+                    <h3>💻 LeetCode</h3>
+                    <p>Shubhash_Singh</p>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <div class="social-section">
+                    <h2>Connect With Me</h2>
+                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out
+                        through any of these platforms.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/shubhash-singh" target="_blank" class="social-card">
+                            <div class="social-icon">🐙</div>
+                            <h3>GitHub</h3>
+                            <p>15 followers • 31+ repositories</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shubhash-singh-124254215" target="_blank"
+                            class="social-card">
+                            <div class="social-icon">💼</div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me professionally</p>
+                        </a>
+                        <a href="https://shubhashsingh.com.np" target="_blank" class="social-card">
+                            <div class="social-icon">🌐</div>
+                            <h3>Website</h3>
+                            <p>Visit my personal site</p>
+                        </a>
+                        <a href="https://leetcode.com/Shubhash_Singh" target="_blank" class="social-card">
+                            <div class="social-icon">💻</div>
+                            <h3>LeetCode</h3>
+                            <p>View my coding profile</p>
+                        </a>
+                        <a href="https://facebook.com/TheRagNaR11" target="_blank" class="social-card">
+                            <div class="social-icon">📘</div>
+                            <h3>Facebook</h3>
+                            <p>Follow me on social media</p>
+                        </a>
+                    </div>
+                    <div class="opportunity-card">
+                        <h3>Open to Opportunities</h3>
+                        <p>I'm currently open to freelance projects, collaborations, and full-time opportunities in
+                            Android development and software engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Shubhash Singh</h3>
+                    <p>Aspiring Software Developer | Computer Science Enthusiast</p>
+                    <p class="location">Based in Bangaluru</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="#home">About Me</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                <div>
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/shubhash-singh" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/shubhash-singh-124254215" target="_blank">LinkedIn</a>
+                        <a href="https://leetcode.com/Shubhash_Singh" target="_blank">LeetCode</a>
+                        <a href="https://facebook.com/TheRagNaR11" target="_blank">Facebook</a>
+                        <a href="https://shubhashsingh.com.np" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shubhash Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>
