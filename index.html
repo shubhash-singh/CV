@@ -98,6 +98,7 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hover-effects.css">
     <style>
         .glow-text-blue {
             text-shadow: 0 0 10px #00d9ff, 0 0 20px #00d9ff, 0 0 30px #00d9ff;
@@ -140,6 +141,8 @@
                         class="nav-link text-hacker-text hover:text-hacker-green transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-hacker-green after:transition-all hover:after:w-full">About</a>
                     <a href="#skills"
                         class="nav-link text-hacker-text hover:text-hacker-green transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-hacker-green after:transition-all hover:after:w-full">Skills</a>
+                    <a href="#experience"
+                        class="nav-link text-hacker-text hover:text-hacker-green transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-hacker-green after:transition-all hover:after:w-full">Experience</a>
                     <a href="#projects"
                         class="nav-link text-hacker-text hover:text-hacker-green transition-all duration-300 font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-hacker-green after:transition-all hover:after:w-full">Projects</a>
                     <a href="#contact"
@@ -180,9 +183,9 @@
                                 class="absolute inset-0 bg-hacker-green transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 -z-0">
                             </div>
                         </a>
-                        <a href="#contact"
+                        <a href="#" onclick="openResumeModal(); return false;"
                             class="bg-transparent text-hacker-cyan border border-hacker-cyan px-8 py-3 rounded hover:bg-hacker-cyan/10 transition-all duration-300 font-mono font-bold hover:shadow-[0_0_20px_rgba(0,217,255,0.4)]">
-                            Get in Touch
+                            Resume
                         </a>
                     </div>
                     <div class="flex gap-6 pt-4">
@@ -238,26 +241,33 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div
-                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 transition-all duration-300 group">
-                    <p class="text-3xl font-bold text-hacker-green mb-2 group-hover:scale-110 transition-transform">15+
+                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 hover:shadow-[0_0_20px_rgba(0,255,65,0.2)] transition-all duration-300 group card-hover">
+                    <i
+                        class="fas fa-code text-3xl text-hacker-green mb-3 block group-hover:scale-110 transition-transform"></i>
+                    <p class="text-3xl font-bold text-hacker-green mb-2">15+</p>
                     </p>
                     <p class="text-hacker-muted font-mono text-sm">Projects</p>
                 </div>
                 <div
-                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 transition-all duration-300 group">
-                    <p class="text-3xl font-bold text-hacker-green mb-2 group-hover:scale-110 transition-transform">5+
+                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 hover:shadow-[0_0_20px_rgba(0,255,65,0.2)] transition-all duration-300 group card-hover">
+                    <i
+                        class="fas fa-layer-group text-3xl text-hacker-green mb-3 block group-hover:scale-110 transition-transform"></i>
+                    <p class="text-3xl font-bold text-hacker-green mb-2">5+</p>
                     </p>
                     <p class="text-hacker-muted font-mono text-sm">Technologies</p>
                 </div>
                 <div
-                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 transition-all duration-300 group">
-                    <p class="text-3xl font-bold text-hacker-green mb-2 group-hover:scale-110 transition-transform">15
-                    </p>
+                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 hover:shadow-[0_0_20px_rgba(0,255,65,0.2)] transition-all duration-300 group card-hover">
+                    <i
+                        class="fas fa-users text-3xl text-hacker-green mb-3 block group-hover:scale-110 transition-transform"></i>
+                    <p class="text-3xl font-bold text-hacker-green mb-2">15</p>
                     <p class="text-hacker-muted font-mono text-sm">Followers</p>
                 </div>
                 <div
-                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 transition-all duration-300 group">
-                    <p class="text-3xl font-bold text-hacker-green mb-2 group-hover:scale-110 transition-transform">100%
+                    class="bg-hacker-blue/50 backdrop-blur border border-hacker-green/20 p-6 rounded-xl text-center hover:border-hacker-green hover:bg-hacker-green/5 hover:shadow-[0_0_20px_rgba(0,255,65,0.2)] transition-all duration-300 group card-hover">
+                    <i
+                        class="fas fa-heart text-3xl text-hacker-green mb-3 block group-hover:scale-110 transition-transform"></i>
+                    <p class="text-3xl font-bold text-hacker-green mb-2">100%</p>
                     </p>
                     <p class="text-hacker-muted font-mono text-sm">Dedication</p>
                 </div>
@@ -459,7 +469,7 @@
                         class="absolute -top-3 left-6 px-2 bg-hacker-blue text-hacker-green text-xs font-mono border border-hacker-green/30">
                         MODULE_01</div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-2xl">📱</span>
+                        <i class="fas fa-mobile-alt text-2xl text-hacker-green"></i>
                         <h3 class="text-xl font-bold text-white">Android Dev</h3>
                     </div>
                     <div class="space-y-4">
@@ -517,7 +527,7 @@
                         class="absolute -top-3 left-6 px-2 bg-hacker-blue text-hacker-green text-xs font-mono border border-hacker-green/30">
                         MODULE_02</div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-2xl">💻</span>
+                        <i class="fas fa-code text-2xl text-hacker-green"></i>
                         <h3 class="text-xl font-bold text-white">Languages</h3>
                     </div>
                     <div class="space-y-4">
@@ -575,7 +585,7 @@
                         class="absolute -top-3 left-6 px-2 bg-hacker-blue text-hacker-green text-xs font-mono border border-hacker-green/30">
                         MODULE_03</div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-2xl">🗄️</span>
+                        <i class="fas fa-database text-2xl text-hacker-green"></i>
                         <h3 class="text-xl font-bold text-white">Data & Backend</h3>
                     </div>
                     <div class="space-y-4">
@@ -633,7 +643,7 @@
                         class="absolute -top-3 left-6 px-2 bg-hacker-blue text-hacker-green text-xs font-mono border border-hacker-green/30">
                         MODULE_04</div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-2xl">⚙️</span>
+                        <i class="fas fa-tools text-2xl text-hacker-green"></i>
                         <h3 class="text-xl font-bold text-white">Tools</h3>
                     </div>
                     <div class="space-y-4">
@@ -691,7 +701,7 @@
                         class="absolute -top-3 left-6 px-2 bg-hacker-blue text-hacker-green text-xs font-mono border border-hacker-green/30">
                         MODULE_05</div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-2xl">🎯</span>
+                        <i class="fas fa-puzzle-piece text-2xl text-hacker-green"></i>
                         <h3 class="text-xl font-bold text-white">Problem Solving</h3>
                     </div>
                     <div class="space-y-4">
@@ -749,7 +759,7 @@
                         class="absolute -top-3 left-6 px-2 bg-hacker-blue text-hacker-green text-xs font-mono border border-hacker-green/30">
                         MODULE_06</div>
                     <div class="flex items-center gap-3 mb-6">
-                        <span class="text-2xl">🌐</span>
+                        <i class="fas fa-globe text-2xl text-hacker-green"></i>
                         <h3 class="text-xl font-bold text-white">Web Tech</h3>
                     </div>
                     <div class="space-y-4">
@@ -802,7 +812,8 @@
             </div>
 
             <div class="bg-hacker-dark/30 border border-hacker-green/20 p-8 rounded-xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-4 opacity-20 text-6xl rotate-12">🛠️</div>
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl rotate-12"><i
+                        class="fas fa-cogs text-hacker-green"></i></div>
                 <h2 class="text-2xl font-bold text-white mb-6">Tools & Technologies Registry</h2>
                 <div class="flex flex-wrap gap-3">
                     <span
@@ -849,6 +860,149 @@
                     <h3 class="text-purple-400 font-bold text-lg mb-2">Team Player</h3>
                     <p class="text-hacker-muted text-sm">Experienced in collaborating with teams and contributing to
                         open-source projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-hacker-blue relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-hacker-cyan/5 via-transparent to-transparent opacity-50">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2
+                    class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-hacker-green to-hacker-cyan inline-block border-b-2 border-hacker-cyan/30 pb-2">
+                    <span class="text-hacker-cyan mr-2">{</span>Work_Experience<span
+                        class="text-hacker-cyan ml-2">}</span>
+                </h2>
+                <p class="text-hacker-muted mt-4 font-mono">Professional journey and contributions</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Experience 1 -->
+                <div
+                    class="bg-hacker-dark/50 backdrop-blur border border-hacker-green/20 rounded-xl p-8 hover:border-hacker-green/60 transition-all duration-300 group">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-hacker-green transition-colors">
+                                Android Developer Intern
+                            </h3>
+                            <p class="text-hacker-cyan font-mono text-lg mt-1">PADAAMS INNOVATIVE TECHNOLABS PVT LTD</p>
+                            <p class="text-hacker-muted text-sm mt-1"><i class="fas fa-map-marker-alt mr-2"></i>Remote
+                            </p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span
+                                class="inline-block px-4 py-2 bg-hacker-green/10 border border-hacker-green/30 rounded text-hacker-green font-mono text-sm">
+                                August 2025 – Current
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="border-l-2 border-hacker-green/30 pl-6 space-y-3 mt-6">
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-green mr-3 mt-1">▹</span>
+                            <span>Developed an Android educational app using <span
+                                    class="text-hacker-cyan font-semibold">Jetpack Compose, Kotlin, and MVVM
+                                    architecture</span></span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-green mr-3 mt-1">▹</span>
+                            <span>Integrated <span class="text-hacker-cyan font-semibold">Groq LLaMA 4 AI model</span>
+                                to deliver personalized tutoring with real-time concept visualization for <span
+                                    class="text-hacker-green font-semibold">10,000+ students</span></span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-green mr-3 mt-1">▹</span>
+                            <span>Engineered an interactive Canvas-based graph visualization system with gesture
+                                controls for AI-generated concept maps</span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-green mr-3 mt-1">▹</span>
+                            <span>Implemented multi-language voice integration (STT/TTS) with lip-sync animations
+                                supporting <span class="text-hacker-cyan font-semibold">4 languages</span> (English,
+                                Hindi, Kannada, Telugu)</span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-green mr-3 mt-1">▹</span>
+                            <span>Built a secure authentication flow using Google Credential Manager API and StateFlow,
+                                achieving <span class="text-hacker-green font-semibold">99.8% uptime</span></span>
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span
+                            class="px-3 py-1 bg-hacker-green/5 border border-hacker-green/20 rounded text-hacker-green text-xs font-mono">Kotlin</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-cyan/5 border border-hacker-cyan/20 rounded text-hacker-cyan text-xs font-mono">Jetpack
+                            Compose</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-green/5 border border-hacker-green/20 rounded text-hacker-green text-xs font-mono">MVVM</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-cyan/5 border border-hacker-cyan/20 rounded text-hacker-cyan text-xs font-mono">AI/ML</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-green/5 border border-hacker-green/20 rounded text-hacker-green text-xs font-mono">Canvas
+                            API</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-cyan/5 border border-hacker-cyan/20 rounded text-hacker-cyan text-xs font-mono">STT/TTS</span>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div
+                    class="bg-hacker-dark/50 backdrop-blur border border-hacker-cyan/20 rounded-xl p-8 hover:border-hacker-cyan/60 transition-all duration-300 group">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-hacker-cyan transition-colors">
+                                Web Developer Freelancer
+                            </h3>
+                            <p class="text-hacker-cyan font-mono text-lg mt-1">Dhrishta Educational Foundation</p>
+                            <p class="text-hacker-muted text-sm mt-1"><i class="fas fa-briefcase mr-2"></i>Freelance</p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <span
+                                class="inline-block px-4 py-2 bg-hacker-cyan/10 border border-hacker-cyan/30 rounded text-hacker-cyan font-mono text-sm">
+                                March 2025 – April 2025
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="border-l-2 border-hacker-cyan/30 pl-6 space-y-3 mt-6">
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-cyan mr-3 mt-1">▹</span>
+                            <span>Designed and developed a fully responsive website for a non-profit organization</span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-cyan mr-3 mt-1">▹</span>
+                            <span>Handled end-to-end development: UI design, HTML/CSS, domain registration, and email
+                                setup</span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-cyan mr-3 mt-1">▹</span>
+                            <span>Integrated sections for Mission, Team, Gallery, and Contact; optimized for <span
+                                    class="text-hacker-cyan font-semibold">SEO</span></span>
+                        </p>
+                        <p class="text-hacker-text leading-relaxed flex items-start">
+                            <span class="text-hacker-cyan mr-3 mt-1">▹</span>
+                            <span>Increased donor engagement by <span class="text-hacker-green font-semibold">25%</span>
+                                through SEO optimization</span>
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span
+                            class="px-3 py-1 bg-hacker-cyan/5 border border-hacker-cyan/20 rounded text-hacker-cyan text-xs font-mono">HTML/CSS</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-green/5 border border-hacker-green/20 rounded text-hacker-green text-xs font-mono">JavaScript</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-cyan/5 border border-hacker-cyan/20 rounded text-hacker-cyan text-xs font-mono">SEO</span>
+                        <span
+                            class="px-3 py-1 bg-hacker-green/5 border border-hacker-green/20 rounded text-hacker-green text-xs font-mono">Responsive
+                            Design</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1431,6 +1585,188 @@
             document.getElementById('year').textContent = new Date().getFullYear();
         </script>
     </footer>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal"
+        class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div
+            class="bg-hacker-blue border-2 border-hacker-green/50 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-[0_0_50px_rgba(0,255,65,0.3)] relative">
+            <!-- Modal Header -->
+            <div
+                class="bg-hacker-dark border-b border-hacker-green/30 p-6 flex justify-between items-center sticky top-0 z-10">
+                <h2 class="text-2xl font-bold text-hacker-green font-mono flex items-center">
+                    <i class="fas fa-file-alt mr-3"></i>
+                    Resume.pdf
+                </h2>
+                <button onclick="closeResumeModal()"
+                    class="text-hacker-green hover:text-white transition-colors text-2xl hover:rotate-90 transform duration-300">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-8 overflow-y-auto max-h-[calc(90vh-100px)] custom-scrollbar">
+                <!-- Personal Info -->
+                <div class="mb-8 text-center border-b border-hacker-green/20 pb-6">
+                    <h1 class="text-4xl font-bold text-white mb-2">SHUBHASH SINGH</h1>
+                    <p class="text-hacker-cyan font-mono mb-4">Android Developer & Software Engineer</p>
+                    <div class="flex flex-wrap justify-center gap-4 text-hacker-muted text-sm">
+                        <span><i class="fas fa-map-marker-alt text-hacker-green mr-2"></i>Banguluru</span>
+                        <span><i class="fas fa-envelope text-hacker-green mr-2"></i>subhashsingh2059@gmail.com</span>
+                        <span><i class="fas fa-phone text-hacker-green mr-2"></i>+91 9381560406</span>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="mb-8">
+                    <h3
+                        class="text-2xl font-bold text-hacker-green mb-4 flex items-center border-b border-hacker-green/30 pb-2">
+                        <i class="fas fa-briefcase mr-3"></i>Work Experience
+                    </h3>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Android Developer Intern</h4>
+                                <p class="text-hacker-cyan font-mono">PADAAMS INNOVATIVE TECHNOLABS PVT LTD</p>
+                                <p class="text-hacker-muted text-sm">Remote</p>
+                            </div>
+                            <span class="text-hacker-green font-mono text-sm">Aug 2025 – Current</span>
+                        </div>
+                        <ul class="list-none space-y-2 ml-4 text-hacker-text">
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Developed an
+                                Android educational app using Jetpack Compose, Kotlin, and MVVM architecture</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Integrated Groq
+                                LLaMA 4 AI model to deliver personalized tutoring with real-time concept visualization
+                                for 10,000+ students</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Engineered an
+                                interactive Canvas-based graph visualization system with gesture controls for
+                                AI-generated concept maps</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Implemented
+                                multi-language voice integration (STT/TTS) with lip-sync animations supporting 4
+                                languages (English, Hindi, Kannada, Telugu)</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Built a secure
+                                authentication flow using Google Credential Manager API and StateFlow, achieving 99.8%
+                                uptime</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Web Developer Freelancer</h4>
+                                <p class="text-hacker-cyan font-mono">Dhrishta Educational Foundation</p>
+                                <p class="text-hacker-muted text-sm">Freelance</p>
+                            </div>
+                            <span class="text-hacker-green font-mono text-sm">Mar 2025 – Apr 2025</span>
+                        </div>
+                        <ul class="list-none space-y-2 ml-4 text-hacker-text">
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Designed and
+                                developed a fully responsive website for a non-profit organization</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Handled end-to-end
+                                development: UI design, HTML/CSS, domain registration, and email setup</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Integrated
+                                sections for Mission, Team, Gallery, and Contact; optimized for SEO</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Increased donor
+                                engagement by 25% through SEO optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="mb-8">
+                    <h3
+                        class="text-2xl font-bold text-hacker-green mb-4 flex items-center border-b border-hacker-green/30 pb-2">
+                        <i class="fas fa-graduation-cap mr-3"></i>Education
+                    </h3>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Bachelor of Science in Computer Science</h4>
+                        <p class="text-hacker-cyan">Sri Venkateswara College of Engineering and Technology, Andhra
+                            Pradesh, India</p>
+                        <p class="text-hacker-muted text-sm">Nov 2022 – April 2026</p>
+                        <p class="text-hacker-text mt-2"><span class="text-hacker-green font-semibold">GPA:</span> 7.5
+                        </p>
+                        <p class="text-hacker-text"><span class="text-hacker-green font-semibold">Major:</span> Computer
+                            Science Engineering</p>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="mb-8">
+                    <h3
+                        class="text-2xl font-bold text-hacker-green mb-4 flex items-center border-b border-hacker-green/30 pb-2">
+                        <i class="fas fa-code mr-3"></i>Projects
+                    </h3>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">Expense Tracker</h4>
+                        <p class="text-hacker-cyan text-sm mb-2">Android Studio, Java, Firebase</p>
+                        <ul class="list-none space-y-2 ml-4 text-hacker-text">
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Developed a
+                                financial management app handling 2,000+ monthly transactions for 500+ active users</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Implemented
+                                interactive data visualizations using MPAndroidChart for expense summaries and trend
+                                analysis</li>
+                            <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Integrated
+                                Firebase Authentication and Cloud Firestore for secure storage with offline capability
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="mb-8">
+                    <h3
+                        class="text-2xl font-bold text-hacker-green mb-4 flex items-center border-b border-hacker-green/30 pb-2">
+                        <i class="fas fa-tools mr-3"></i>Skills
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-hacker-cyan font-semibold mb-2">Languages</h4>
+                            <p class="text-hacker-text">Java, Kotlin, Python</p>
+                        </div>
+                        <div>
+                            <h4 class="text-hacker-cyan font-semibold mb-2">Tools/Frameworks</h4>
+                            <p class="text-hacker-text">Spring Boot, Jetpack Compose, Google Cloud, Google Firebase</p>
+                        </div>
+                        <div>
+                            <h4 class="text-hacker-cyan font-semibold mb-2">Databases</h4>
+                            <p class="text-hacker-text">MongoDB, Firebase, MySQL</p>
+                        </div>
+                        <div>
+                            <h4 class="text-hacker-cyan font-semibold mb-2">Technologies</h4>
+                            <p class="text-hacker-text">Git & GitHub, Android Studio, Postman</p>
+                        </div>
+                        <div>
+                            <h4 class="text-hacker-cyan font-semibold mb-2">Core Concepts</h4>
+                            <p class="text-hacker-text">Data Structures and Algorithms (DSA), API Development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificates -->
+                <div class="mb-4">
+                    <h3
+                        class="text-2xl font-bold text-hacker-green mb-4 flex items-center border-b border-hacker-green/30 pb-2">
+                        <i class="fas fa-certificate mr-3"></i>Certificates
+                    </h3>
+                    <ul class="list-none space-y-2 ml-4 text-hacker-text">
+                        <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>Java Certification -
+                            Issued by L&T EduTech</li>
+                        <li class="flex items-start"><span class="text-hacker-green mr-2">•</span>LeetCode - 450+
+                            problems solved</li>
+                    </ul>
+                </div>
+
+                <!-- Download Button -->
+                <div class="mt-8 text-center border-t border-hacker-green/20 pt-6">
+                    <a href="Shubhash Singh Resume.pdf" download
+                        class="inline-block bg-hacker-green text-hacker-dark px-8 py-3 rounded font-mono font-bold hover:bg-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,65,0.6)]">
+                        <i class="fas fa-download mr-2"></i>Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

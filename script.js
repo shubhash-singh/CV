@@ -246,54 +246,109 @@ function initMatrixRain() {
     setInterval(draw, 33);
 }
 
-// Mouse Trailing Effect for Photo Card
-const photoCard = document.getElementById('photo-card');
-if (photoCard) {
-    const trails = [];
-    const maxTrails = 20;
 
-    photoCard.addEventListener('mousemove', (e) => {
-        const rect = photoCard.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+// Floating Interactive Icons
+function createFloatingIcons() {
+    const sections = ['about', 'skills', 'projects'];
+    const icons = {
+        about: ['fa-code', 'fa-laptop-code', 'fa-terminal', 'fa-bug'],
+        skills: ['fa-java', 'fa-python', 'fa-js', 'fa-android'],
+        projects: ['fa-rocket', 'fa-star', 'fa-lightbulb', 'fa-cog']
+    };
 
-        // Create trail element
-        const trail = document.createElement('div');
-        trail.style.position = 'absolute';
-        trail.style.left = x + 'px';
-        trail.style.top = y + 'px';
-        trail.style.width = '8px';
-        trail.style.height = '8px';
-        trail.style.borderRadius = '50%';
-        trail.style.background = 'radial-gradient(circle, rgba(0,217,255,0.8) 0%, rgba(0,217,255,0) 70%)';
-        trail.style.pointerEvents = 'none';
-        trail.style.zIndex = '5';
-        trail.style.transform = 'translate(-50%, -50%)';
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
 
-        photoCard.appendChild(trail);
-        trails.push(trail);
+        const container = document.createElement('div');
+        container.className = 'floating-icons-container';
+        container.style.position = 'absolute';
+        container.style.inset = '0';
+        container.style.pointerEvents = 'none';
+        container.style.overflow = 'hidden';
+        container.style.zIndex = '1';
 
-        // Animate and remove
-        setTimeout(() => {
-            trail.style.transition = 'opacity 0.5s, transform 0.5s';
-            trail.style.opacity = '0';
-            trail.style.transform = 'translate(-50%, -50%) scale(2)';
+        // Create 4 floating icons per section
+        for (let i = 0; i < 4; i++) {
+            const icon = document.createElement('i');
+            icon.className = `fas ${icons[sectionId][i]} floating-icon`;
+            icon.style.position = 'absolute';
+            icon.style.fontSize = '24px';
+            icon.style.color = 'rgba(0, 255, 65, 0.15)';
+            icon.style.left = `${Math.random() * 80 + 10}%`;
+            icon.style.top = `${Math.random() * 80 + 10}%`;
+            icon.style.animation = `float ${5 + Math.random() * 3}s ease-in-out infinite`;
+            icon.style.animationDelay = `${Math.random() * 2}s`;
 
-            setTimeout(() => {
-                if (trail.parentNode) {
-                    trail.parentNode.removeChild(trail);
-                }
-                const index = trails.indexOf(trail);
-                if (index > -1) trails.splice(index, 1);
-            }, 500);
-        }, 100);
-
-        // Limit number of trails
-        while (trails.length > maxTrails) {
-            const oldTrail = trails.shift();
-            if (oldTrail && oldTrail.parentNode) {
-                oldTrail.parentNode.removeChild(oldTrail);
-            }
+            container.appendChild(icon);
         }
+
+        section.style.position = 'relative';
+        section.insertBefore(container, section.firstChild);
+    });
+
+    // Mouse interaction with floating icons
+    document.addEventListener('mousemove', (e) => {
+        document.querySelectorAll('.floating-icon').forEach(icon => {
+            const rect = icon.getBoundingClientRect();
+            const iconX = rect.left + rect.width / 2;
+            const iconY = rect.top + rect.height / 2;
+
+            const deltaX = e.clientX - iconX;
+            const deltaY = e.clientY - iconY;
+            const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+            if (distance < 150) {
+                const angle = Math.atan2(deltaY, deltaX);
+                const force = (150 - distance) / 150;
+                const moveX = -Math.cos(angle) * force * 30;
+                const moveY = -Math.sin(angle) * force * 30;
+
+                icon.style.transform = `translate(${moveX}px, ${moveY}px) scale(${1 + force * 0.5})`;
+                icon.style.color = `rgba(0, 255, 65, ${0.15 + force * 0.3})`;
+            } else {
+                icon.style.transform = 'translate(0, 0) scale(1)';
+                icon.style.color = 'rgba(0, 255, 65, 0.15)';
+            }
+        });
     });
 }
+
+// Initialize floating icons
+document.addEventListener('DOMContentLoaded', () => {
+    createFloatingIcons();
+});
+
+// Resume Modal Functions
+function openResumeModal() {
+    const modal = document.getElementById('resumeModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeResumeModal() {
+    const modal = document.getElementById('resumeModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('resumeModal');
+    if (modal && e.target === modal) {
+        closeResumeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeResumeModal();
+    }
+});
