@@ -36,26 +36,29 @@ body {
 
 .glow-text {
     text-shadow: 0 0 10px var(--hacker-green),
-                 0 0 20px var(--hacker-green),
-                 0 0 30px var(--hacker-green);
+        0 0 20px var(--hacker-green),
+        0 0 30px var(--hacker-green);
     animation: glow-pulse 2s ease-in-out infinite;
 }
 
 .glow-cyan {
     text-shadow: 0 0 10px var(--hacker-cyan),
-                 0 0 20px var(--hacker-cyan);
+        0 0 20px var(--hacker-cyan);
 }
 
 @keyframes glow-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         text-shadow: 0 0 10px var(--hacker-green),
-                     0 0 20px var(--hacker-green),
-                     0 0 30px var(--hacker-green);
+            0 0 20px var(--hacker-green),
+            0 0 30px var(--hacker-green);
     }
+
     50% {
         text-shadow: 0 0 20px var(--hacker-green),
-                     0 0 30px var(--hacker-green),
-                     0 0 40px var(--hacker-green);
+            0 0 30px var(--hacker-green),
+            0 0 40px var(--hacker-green);
     }
 }
 
@@ -67,18 +70,18 @@ body {
     position: relative;
     border: 2px solid var(--hacker-green);
     box-shadow: 0 0 10px var(--hacker-green),
-                inset 0 0 10px rgba(0, 255, 65, 0.1);
+        inset 0 0 10px rgba(0, 255, 65, 0.1);
 }
 
 .neon-border-cyan {
     border: 2px solid var(--hacker-cyan);
     box-shadow: 0 0 10px var(--hacker-cyan),
-                inset 0 0 10px rgba(0, 217, 255, 0.1);
+        inset 0 0 10px rgba(0, 217, 255, 0.1);
 }
 
 .neon-border:hover {
     box-shadow: 0 0 20px var(--hacker-green),
-                inset 0 0 20px rgba(0, 255, 65, 0.2);
+        inset 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
 /* ===================================
@@ -93,8 +96,16 @@ body {
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
 
 /* ===================================
@@ -131,29 +142,77 @@ body {
 }
 
 @keyframes glitch-anim {
-    0% { clip: rect(31px, 9999px, 94px, 0); }
-    20% { clip: rect(85px, 9999px, 72px, 0); }
-    40% { clip: rect(14px, 9999px, 33px, 0); }
-    60% { clip: rect(67px, 9999px, 11px, 0); }
-    80% { clip: rect(42px, 9999px, 98px, 0); }
-    100% { clip: rect(56px, 9999px, 21px, 0); }
+    0% {
+        clip: rect(31px, 9999px, 94px, 0);
+    }
+
+    20% {
+        clip: rect(85px, 9999px, 72px, 0);
+    }
+
+    40% {
+        clip: rect(14px, 9999px, 33px, 0);
+    }
+
+    60% {
+        clip: rect(67px, 9999px, 11px, 0);
+    }
+
+    80% {
+        clip: rect(42px, 9999px, 98px, 0);
+    }
+
+    100% {
+        clip: rect(56px, 9999px, 21px, 0);
+    }
 }
 
 @keyframes glitch-anim2 {
-    0% { clip: rect(65px, 9999px, 23px, 0); }
-    20% { clip: rect(90px, 9999px, 54px, 0); }
-    40% { clip: rect(12px, 9999px, 78px, 0); }
-    60% { clip: rect(34px, 9999px, 45px, 0); }
-    80% { clip: rect(71px, 9999px, 29px, 0); }
-    100% { clip: rect(18px, 9999px, 83px, 0); }
+    0% {
+        clip: rect(65px, 9999px, 23px, 0);
+    }
+
+    20% {
+        clip: rect(90px, 9999px, 54px, 0);
+    }
+
+    40% {
+        clip: rect(12px, 9999px, 78px, 0);
+    }
+
+    60% {
+        clip: rect(34px, 9999px, 45px, 0);
+    }
+
+    80% {
+        clip: rect(71px, 9999px, 29px, 0);
+    }
+
+    100% {
+        clip: rect(18px, 9999px, 83px, 0);
+    }
 }
 
 @keyframes glitch-skew {
-    0% { transform: skew(0deg); }
-    10% { transform: skew(-2deg); }
-    20% { transform: skew(2deg); }
-    30% { transform: skew(0deg); }
-    100% { transform: skew(0deg); }
+    0% {
+        transform: skew(0deg);
+    }
+
+    10% {
+        transform: skew(-2deg);
+    }
+
+    20% {
+        transform: skew(2deg);
+    }
+
+    30% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
 }
 
 /* ===================================
@@ -172,13 +231,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.15),
-        rgba(0, 0, 0, 0.15) 1px,
-        transparent 1px,
-        transparent 2px
-    );
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 2px);
     pointer-events: none;
     z-index: 10;
 }
@@ -188,10 +245,143 @@ body {
    =================================== */
 
 .grid-bg {
-    background-image: 
-        linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+    background-color: #000000;
+    background-image:
+        linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
+    position: relative;
+}
+
+/* Floating background elements */
+.floating-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-icon {
+    position: absolute;
+    color: var(--hacker-green);
+    opacity: 0.03;
+    font-size: 2rem;
+    animation: float-random 20s infinite ease-in-out;
+}
+
+.floating-icon:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+    font-size: 3rem;
+}
+
+.floating-icon:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    animation-delay: 2s;
+    font-size: 2.5rem;
+}
+
+.floating-icon:nth-child(3) {
+    top: 40%;
+    left: 10%;
+    animation-delay: 4s;
+    font-size: 2rem;
+}
+
+.floating-icon:nth-child(4) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 6s;
+    font-size: 3.5rem;
+}
+
+.floating-icon:nth-child(5) {
+    top: 75%;
+    left: 25%;
+    animation-delay: 8s;
+    font-size: 2rem;
+}
+
+.floating-icon:nth-child(6) {
+    top: 85%;
+    left: 85%;
+    animation-delay: 10s;
+    font-size: 2.5rem;
+}
+
+.floating-icon:nth-child(7) {
+    top: 30%;
+    left: 50%;
+    animation-delay: 3s;
+    font-size: 3rem;
+    opacity: 0.02;
+}
+
+.floating-icon:nth-child(8) {
+    top: 50%;
+    left: 90%;
+    animation-delay: 7s;
+    font-size: 2rem;
+    opacity: 0.02;
+}
+
+@keyframes float-random {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(10px, -15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(-5px, -25px) rotate(-3deg);
+    }
+
+    75% {
+        transform: translate(15px, -10px) rotate(7deg);
+    }
+}
+
+/* Radial gradient overlays */
+.gradient-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.gradient-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.gradient-blob-green {
+    background: radial-gradient(circle, var(--hacker-green) 0%, transparent 70%);
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    left: -100px;
+}
+
+.gradient-blob-cyan {
+    background: radial-gradient(circle, var(--hacker-cyan) 0%, transparent 70%);
+    width: 600px;
+    height: 600px;
+    bottom: -150px;
+    right: -150px;
 }
 
 /* ===================================
@@ -203,6 +393,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -214,6 +405,7 @@ body {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -224,15 +416,19 @@ body {
     from {
         width: 0;
     }
+
     to {
         width: var(--target-width);
     }
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -284,6 +480,7 @@ body {
    =================================== */
 
 @media (max-width: 768px) {
+
     .glitch::before,
     .glitch::after {
         display: none;
@@ -316,13 +513,25 @@ body {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--hacker-green); }
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--hacker-green);
+    }
 }
 
 /* ===================================
@@ -335,20 +544,35 @@ body {
 
 .hover-glow:hover {
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.5),
-                0 0 40px rgba(0, 255, 65, 0.3);
+        0 0 40px rgba(0, 255, 65, 0.3);
     transform: translateY(-5px);
 }
 
 .hover-glow-cyan:hover {
     box-shadow: 0 0 20px rgba(0, 217, 255, 0.5),
-                0 0 40px rgba(0, 217, 255, 0.3);
+        0 0 40px rgba(0, 217, 255, 0.3);
+}
+
+/* ===================================
+   CARD HOVER ELEVATION
+   =================================== */
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3),
+        0 5px 15px rgba(0, 255, 65, 0.2);
 }
 
 /* ===================================
    CODE BLOCK STYLING
    =================================== */
 
-code, pre {
+code,
+pre {
     font-family: 'Fira Code', monospace;
     background: rgba(17, 34, 64, 0.5);
     border: 1px solid rgba(0, 255, 65, 0.2);
