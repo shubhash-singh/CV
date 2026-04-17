@@ -1,7 +1,7 @@
 // ===== DATA =====
 const personalInfo = {
     name: "Shubhash Singh",
-    title: "Android Developer",
+    title: "Android Developer at HARMAN INTERNATIONAL A Samsumg Company",
     subtitle: "Software Engineer",
     tagline: "Building innovative mobile solutions that make a difference",
     location: "Bangalore, India",
@@ -80,8 +80,7 @@ const skills = {
             skills: [
                 { name: "Java", level: 90 },
                 { name: "Kotlin", level: 85 },
-                { name: "Python", level: 80 },
-                { name: "JavaScript", level: 75 }
+                { name: "Python", level: 80 }
             ]
         },
         {
@@ -89,10 +88,10 @@ const skills = {
             icon: "database",
             skills: [
                 { name: "SQLite", level: 85 },
-                { name: "Firebase", level: 82 },
+                { name: "Google Firebase", level: 82 },
                 { name: "MongoDB", level: 78 },
                 { name: "REST APIs", level: 80 },
-                { name: "Django", level: 70 }
+                { name: "Spring Boot", level: 70 }
             ]
         },
         {
@@ -102,14 +101,17 @@ const skills = {
                 { name: "Git & GitHub", level: 88 },
                 { name: "VS Code", level: 90 },
                 { name: "Postman", level: 85 },
-                { name: "Linux", level: 78 }
+                { name: "Linux", level: 78 },
+                { name: "Google Cloud", level: 60 }
             ]
         }
     ],
     technologies: [
         "Android SDK", "Jetpack Compose", "MVVM Architecture", "Room Database",
         "Retrofit", "Coroutines", "Firebase", "Material Design",
-        "RESTful APIs", "Git Version Control", "Gradle", "JUnit Testing"
+        "RESTful APIs", "Git Version Control", "Gradle", "JUnit Testing",
+        "Data Structure and Algorith", "Spring Boot", "Java Spring",
+        "Jyputer", "Python LangGraph", "Agentic AI"
     ]
 };
 
@@ -117,21 +119,37 @@ const experience = [
     {
         id: 1,
         title: "Android Developer Intern",
+        company: "HARMAN INTERNATIONAL A Samsumg Company",
+        location: "Bangalore",
+        duration: "Feb 2026 - Current",
+        type: "Internship",
+        responsibilities: [
+            "Added and maintained Unit Tests (JUnit, Mockito) for Android-based automotive applications,improving code reliability and achieving high code and branch coverage.",
+            "Contributed to Human Machine Interface (HMI) development for automotive infotainment systems,enhancing interaction flow and overall usability.",
+            "Updated and optimized UI layouts for a new 15-inch automotive display, ensuring proper scaling,responsiveness, and compatibility across different screen densities and hardware configurations.",
+            "Implemented dynamic Dark and Light themes and refactored UI components to support theming,configuration changes, and consistent rendering across devices while maintaining performance."
+        ],
+        technologies: ["Java", "XML", "Unit Testing", "Infotainment System", "Automotive Domain", "Android Automotive OS", "Android Auto"]
+    },
+    {
+        id: 2,
+        title: "Android Developer Intern",
         company: "PADAAMS INNOVATIVE TECHNOLABS PVT LTD",
         location: "Remote",
-        duration: "Aug 2025 - Current",
+        duration: "Aug 2025 - Feb 2026",
         type: "Internship",
         responsibilities: [
             "Developed an Android educational app using Jetpack Compose, Kotlin, and MVVM architecture",
             "Integrated Groq LLaMA 4 AI model to deliver personalized tutoring with real-time concept visualization for 10,000+ students",
             "Engineered an interactive Canvas-based graph visualization system with gesture controls for AI-generated concept maps",
             "Implemented multi-language voice integration (STT/TTS) with lip-sync animations supporting 4 languages (English, Hindi, Kannada, Telugu)",
-            "Built a secure authentication flow using Google Credential Manager API and StateFlow, achieving 99.8% uptime"
+            "Built a secure authentication flow using Google Credential Manager API and StateFlow, achieving 99.8% uptime",
+            "Implemented DB auto sync"
         ],
-        technologies: ["Kotlin", "Jetpack Compose", "MVVM", "AI Integration", "Firebase"]
+        technologies: ["Kotlin", "Jetpack Compose", "MVVM", "AI Integration", "Firebase", "RoomDB"]
     },
     {
-        id: 2,
+        id: 1,
         title: "Web Developer Freelancer",
         company: "Dhrishta Educational Foundation",
         location: "Freelance",
@@ -298,7 +316,7 @@ function updateActiveSection() {
 
 // ===== TYPING ANIMATION =====
 function initTypingAnimation() {
-    const roles = ['Android Developer', 'Software Engineer', 'Problem Solver', 'Tech Enthusiast'];
+    const roles = ['Android Developer', 'Software Engineer', 'Problem Solver', 'Tech Enthusiast', 'Java Developer'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
