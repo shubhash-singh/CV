@@ -29,8 +29,7 @@
 
     <!-- Additional SEO -->
     <link rel="canonical" href="https://shubhashsingh.com.np">
-    <meta name="theme-color" content="#10b981">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#3DDC84">
 
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
@@ -66,6 +65,11 @@
     <meta name="author" content="Shubhash Singh">
     <title>Shubhash Singh - Android Developer & Software Engineer</title>
 
+    <!-- Split CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/nav-hero.css">
+    <link rel="stylesheet" href="css/sections.css">
 
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -117,14 +121,19 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg">
-            <div class="hero-blob hero-blob-1"></div>
-            <div class="hero-blob hero-blob-2"></div>
+        <!-- Animated code background decoration -->
+        <div class="hero-code-bg" aria-hidden="true">
+            <div class="hero-code-scroll" id="hero-code"></div>
         </div>
+        <!-- Grid overlay -->
+        <div class="hero-grid-overlay" aria-hidden="true"></div>
+        <!-- Glow blobs -->
+        <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
 
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-badge">Welcome to my portfolio</div>
+                <div class="hero-badge">android.developer</div>
 
                 <h1 class="hero-title">
                     Hi, I'm <span class="gradient-text">Shubhash Singh</span>
@@ -136,32 +145,37 @@
                     </h2>
                 </div>
 
+                <div class="hero-company">
+                    <i data-lucide="building-2" style="width:14px;height:14px"></i>
+                    <strong>HARMAN International</strong>&nbsp;· A Samsung Company
+                </div>
+
                 <p class="hero-description">
                     Building innovative mobile solutions that make a difference
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary btn-lg">
+                    <a href="#projects" class="btn btn-primary btn-lg ripple-host">
                         View My Work
                         <i data-lucide="arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn btn-outline btn-lg">Get In Touch</a>
+                    <a href="#contact" class="btn btn-outline btn-lg ripple-host">Get In Touch</a>
                 </div>
 
                 <div class="hero-social">
                     <a href="https://github.com/shubhash-singh" target="_blank" rel="noopener noreferrer"
-                        class="social-link">
+                        class="social-link" aria-label="GitHub">
                         <i data-lucide="github"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/shubhash-singh-124254215" target="_blank"
-                        rel="noopener noreferrer" class="social-link">
+                        rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
                         <i data-lucide="linkedin"></i>
                     </a>
-                    <a href="mailto:subhashsingh2059@gmail.com" class="social-link">
+                    <a href="mailto:subhashsingh2059@gmail.com" class="social-link" aria-label="Email">
                         <i data-lucide="mail"></i>
                     </a>
-                    <a href="https://shubhashsingh.com.np" target="_blank" rel="noopener noreferrer"
-                        class="social-link">
+                    <a href="https://shubhashsingh.com.np" target="_blank" rel="noopener noreferrer" class="social-link"
+                        aria-label="Website">
                         <i data-lucide="external-link"></i>
                     </a>
                 </div>
@@ -171,6 +185,8 @@
                 <div class="hero-image-wrapper">
                     <div class="hero-image-gradient"></div>
                     <div class="hero-image-container">
+                        <div class="phone-notch" aria-hidden="true"></div>
+                        <div class="phone-frame" aria-hidden="true"></div>
                         <img src="ragnar_pic.jpg" alt="Shubhash Singh" class="profile-image">
                         <div class="hero-stats-overlay">
                             <div class="stat-item">
@@ -195,8 +211,12 @@
 
     <!-- About Section -->
     <section id="about" class="about">
+        <div class="section-code-bg" aria-hidden="true">
+            <div class="section-code-scroll" id="code-about"></div>
+        </div>
         <div class="container">
             <div class="section-header">
+                <div class="section-label">about.kt</div>
                 <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
                 <div class="section-divider"></div>
             </div>
@@ -230,7 +250,7 @@
                     <div class="card about-card">
                         <div class="card-content">
                             <div class="card-icon-wrapper">
-                                <div class="card-icon card-icon-sky">
+                                <div class="card-icon card-icon-violet">
                                     <i data-lucide="award"></i>
                                 </div>
                                 <div class="card-text">
@@ -250,7 +270,7 @@
 
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-card-value">2+</div>
+                    <div class="stat-card-value">1+</div>
                     <div class="stat-card-label">Years Experience</div>
                 </div>
                 <div class="stat-card">
@@ -271,9 +291,13 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
+        <div class="section-code-bg" aria-hidden="true">
+            <div class="section-code-scroll" id="code-skills"></div>
+        </div>
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+                <div class="section-label">build.gradle</div>
+                <h2 class="section-title">Skills &amp; <span class="gradient-text">Expertise</span></h2>
                 <div class="section-divider"></div>
                 <p class="section-description">Technologies and tools I use to bring ideas to life</p>
             </div>
@@ -282,7 +306,7 @@
 
             <div class="card technologies-card">
                 <div class="card-header">
-                    <h3 class="card-header-title">Technologies & Tools</h3>
+                    <h3 class="card-header-title">Technologies &amp; Tools</h3>
                 </div>
                 <div class="card-content">
                     <div id="technologies-container" class="technologies-container"></div>
@@ -293,8 +317,12 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
+        <div class="section-code-bg" aria-hidden="true">
+            <div class="section-code-scroll" id="code-experience"></div>
+        </div>
         <div class="container">
             <div class="section-header">
+                <div class="section-label">WorkHistory.java</div>
                 <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
                 <div class="section-divider"></div>
                 <p class="section-description">My professional journey in software development</p>
@@ -309,24 +337,28 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
+        <div class="section-code-bg" aria-hidden="true">
+            <div class="section-code-scroll" id="code-projects"></div>
+        </div>
         <div class="container">
             <div class="section-header">
+                <div class="section-label">MyProjects.kt</div>
                 <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
                 <div class="section-divider"></div>
                 <p class="section-description">A selection of projects I've worked on recently</p>
             </div>
 
             <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="featured">Featured</button>
+                <button class="filter-btn ripple-host active" data-filter="all">All Projects</button>
+                <button class="filter-btn ripple-host" data-filter="featured">Featured</button>
             </div>
 
             <div id="projects-grid" class="projects-grid"></div>
 
             <div class="projects-cta">
                 <a href="https://github.com/shubhash-singh" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-outline btn-lg">
-                    View All Projects on GitHub
+                    class="btn btn-outline btn-lg ripple-host">
+                    View All on GitHub
                     <i data-lucide="external-link"></i>
                 </a>
             </div>
@@ -335,8 +367,12 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
+        <div class="section-code-bg" aria-hidden="true">
+            <div class="section-code-scroll" id="code-contact"></div>
+        </div>
         <div class="container">
             <div class="section-header">
+                <div class="section-label">ContactActivity.kt</div>
                 <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
                 <div class="section-divider"></div>
                 <p class="section-description">Available for freelance work and full-time opportunities</p>
@@ -382,15 +418,15 @@
                         <h4 class="contact-social-title">Connect on Social Media</h4>
                         <div class="contact-social-links">
                             <a href="https://github.com/shubhash-singh" target="_blank" rel="noopener noreferrer"
-                                class="contact-social-link">
+                                class="contact-social-link" aria-label="GitHub">
                                 <i data-lucide="github"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/shubhash-singh-124254215" target="_blank"
-                                rel="noopener noreferrer" class="contact-social-link">
+                                rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn">
                                 <i data-lucide="linkedin"></i>
                             </a>
                             <a href="https://shubhashsingh.com.np" target="_blank" rel="noopener noreferrer"
-                                class="contact-social-link">
+                                class="contact-social-link" aria-label="Website">
                                 <i data-lucide="external-link"></i>
                             </a>
                         </div>
@@ -425,7 +461,7 @@
                                     placeholder="Your message here..." rows="5" required></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-full ripple-host">
                                 Send Message
                                 <i data-lucide="send"></i>
                             </button>
@@ -446,7 +482,7 @@
                         <span class="logo-text">Shubhash Singh</span>
                     </div>
                     <p class="footer-description">
-                        Android Developer & Software Engineer passionate about building innovative mobile solutions.
+                        Android Developer &amp; Software Engineer passionate about building innovative mobile solutions.
                     </p>
                 </div>
 
@@ -466,18 +502,18 @@
                     <h3 class="footer-title">Connect</h3>
                     <div class="footer-social">
                         <a href="https://github.com/shubhash-singh" target="_blank" rel="noopener noreferrer"
-                            class="footer-social-link">
+                            class="footer-social-link" aria-label="GitHub">
                             <i data-lucide="github"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/shubhash-singh-124254215" target="_blank"
-                            rel="noopener noreferrer" class="footer-social-link">
+                            rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
                             <i data-lucide="linkedin"></i>
                         </a>
-                        <a href="mailto:subhashsingh2059@gmail.com" class="footer-social-link">
+                        <a href="mailto:subhashsingh2059@gmail.com" class="footer-social-link" aria-label="Email">
                             <i data-lucide="mail"></i>
                         </a>
                         <a href="https://shubhashsingh.com.np" target="_blank" rel="noopener noreferrer"
-                            class="footer-social-link">
+                            class="footer-social-link" aria-label="Website">
                             <i data-lucide="external-link"></i>
                         </a>
                     </div>
@@ -490,18 +526,16 @@
             <div class="footer-bottom">
                 <p class="footer-copyright">© <span id="current-year"></span> Shubhash Singh. All rights reserved.</p>
                 <p class="footer-credit">
-                    Built with <i data-lucide="heart" class="heart-icon"></i> using HTML, CSS & JavaScript
+                    Built with <i data-lucide="heart" class="heart-icon"></i> using HTML, CSS &amp; JS
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <div class="toast-content">
-            <div class="toast-title">Message sent!</div>
-            <div class="toast-description">Thank you for reaching out. I'll get back to you soon.</div>
-        </div>
+    <!-- Android-style Snackbar Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <div class="toast-title">Message sent! ✓</div>
+        <div class="toast-description">Thank you for reaching out. I'll get back to you soon.</div>
     </div>
 
     <script src="script.js"></script>

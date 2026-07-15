@@ -119,7 +119,7 @@ const experience = [
     {
         id: 1,
         title: "Android Developer Intern",
-        company: "HARMAN INTERNATIONAL A Samsumg Company",
+        company: "HARMAN INTERNATIONAL A Samsung Company",
         location: "Bangalore",
         duration: "Feb 2026 - Current",
         type: "Internship",
@@ -239,6 +239,283 @@ function toggleTheme() {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+}
+
+// ===== MATERIAL RIPPLE EFFECT =====
+function initRipples() {
+    document.addEventListener('click', (e) => {
+        const host = e.target.closest('.ripple-host');
+        if (!host) return;
+        const rect = host.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 2;
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top  - size / 2;
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+        host.appendChild(ripple);
+        ripple.addEventListener('animationend', () => ripple.remove());
+    });
+}
+
+// ===== HERO CODE BACKGROUND =====
+function initHeroCode() {
+    const codeLines = [
+        'class MainActivity : AppCompatActivity() {',
+        '    override fun onCreate(savedInstanceState: Bundle?) {',
+        '        super.onCreate(savedInstanceState)',
+        '        setContentView(R.layout.activity_main)',
+        '        val viewModel: MainViewModel by viewModels()',
+        '        lifecycleScope.launch {',
+        '            viewModel.uiState.collect { state ->',
+        '                updateUI(state)',
+        '            }',
+        '        }',
+        '    }',
+        '}',
+        '',
+        '@Composable',
+        'fun HomeScreen(viewModel: HomeViewModel = hiltViewModel()) {',
+        '    val uiState by viewModel.uiState.collectAsState()',
+        '    Scaffold(',
+        '        topBar = { TopAppBar(title = { Text("Shubhash Singh") }) },',
+        '        floatingActionButton = {',
+        '            ExtendedFloatingActionButton(',
+        '                text = { Text("Connect") },',
+        '                icon = { Icon(Icons.Default.Email, null) },',
+        '                onClick = { /* navigate */ }',
+        '            )',
+        '        }',
+        '    ) { paddingValues ->',
+        '        LazyColumn(contentPadding = paddingValues) {',
+        '            items(uiState.projects) { project ->',
+        '                ProjectCard(project = project)',
+        '            }',
+        '        }',
+        '    }',
+        '}',
+        '',
+        'data class Developer(',
+        '    val name: String = "Shubhash Singh",',
+        '    val role: String = "Android Developer",',
+        '    val company: String = "HARMAN International",',
+        '    val skills: List<String> = listOf(',
+        '        "Kotlin", "Java", "Jetpack Compose",',
+        '        "MVVM", "Coroutines", "Firebase"',
+        '    ),',
+        '    val experience: Int = 2',
+        ')',
+        '',
+        'object AndroidManifest {',
+        '    const val PACKAGE = "com.shubhash.portfolio"',
+        '    const val VERSION_NAME = "2.0.0"',
+        '    const val MIN_SDK = 24',
+        '    const val TARGET_SDK = 35',
+        '}',
+        '',
+        '// build.gradle.kts',
+        'dependencies {',
+        '    implementation("androidx.compose.ui:ui")',
+        '    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx")',
+        '    implementation("com.google.firebase:firebase-firestore")',
+        '    implementation("io.coil-kt:coil-compose")',
+        '    implementation("com.squareup.retrofit2:retrofit")',
+        '}',
+    ];
+    const el = document.getElementById('hero-code');
+    if (!el) return;
+    const full = codeLines.join('\n');
+    el.textContent = full + '\n\n' + full; // doubled for seamless loop
+}
+
+// ===== SECTION CODE BACKGROUNDS =====
+function initSectionCodeBgs() {
+    const sections = {
+        'code-about': [
+            '// About Shubhash Singh',
+            'data class Developer(',
+            '    val name: String        = "Shubhash Singh",',
+            '    val role: String        = "Android Developer",',
+            '    val location: String    = "Bangalore, India",',
+            '    val experience: Int     = 2,',
+            '    val education: String   = "B.Sc Computer Science",',
+            '    val gpa: Float          = 7.5f',
+            ')',
+            '',
+            'val achievements = listOf(',
+            '    "Pull Shark badge on GitHub",',
+            '    "450+ LeetCode problems solved",',
+            '    "31+ open-source repositories",',
+            '    "Java Certified — L&T EduTech",',
+            '    "10,000+ users impacted"',
+            ')',
+            '',
+            'fun describe(dev: Developer): String {',
+            '    return buildString {',
+            '        appendLine("Hello! I am ${dev.name}")',
+            '        appendLine("Passionate about Android & mobile")',
+            '        appendLine("Always learning, always building.")',
+            '    }',
+            '}',
+            '',
+            '// Goals',
+            'enum class Goal {',
+            '    BUILD_IMPACTFUL_APPS,',
+            '    MASTER_JETPACK_COMPOSE,',
+            '    CONTRIBUTE_OPEN_SOURCE,',
+            '    GROW_AS_ENGINEER',
+            '}',
+        ],
+        'code-skills': [
+            '// build.gradle.kts (:app)',
+            'plugins {',
+            '    alias(libs.plugins.android.application)',
+            '    alias(libs.plugins.kotlin.android)',
+            '    alias(libs.plugins.hilt)',
+            '    alias(libs.plugins.ksp)',
+            '}',
+            '',
+            'android {',
+            '    compileSdk = 35',
+            '    defaultConfig {',
+            '        applicationId = "com.shubhash.portfolio"',
+            '        minSdk = 24',
+            '        targetSdk = 35',
+            '        versionCode = 1',
+            '        versionName = "1.0"',
+            '    }',
+            '    buildFeatures { compose = true }',
+            '    composeOptions {',
+            '        kotlinCompilerExtensionVersion = "1.5.14"',
+            '    }',
+            '}',
+            '',
+            'dependencies {',
+            '    // Core',
+            '    implementation(libs.androidx.core.ktx)',
+            '    implementation(libs.androidx.lifecycle.runtime.ktx)',
+            '    implementation(libs.androidx.activity.compose)',
+            '    // Compose',
+            '    implementation(platform(libs.androidx.compose.bom))',
+            '    implementation(libs.androidx.ui)',
+            '    implementation(libs.androidx.material3)',
+            '    // Architecture',
+            '    implementation(libs.hilt.android)',
+            '    implementation(libs.androidx.room.runtime)',
+            '    implementation(libs.androidx.room.ktx)',
+            '    // Network',
+            '    implementation(libs.retrofit)',
+            '    implementation(libs.retrofit.gson)',
+            '    implementation(libs.okhttp.logging)',
+            '    // Firebase',
+            '    implementation(platform(libs.firebase.bom))',
+            '    implementation(libs.firebase.firestore.ktx)',
+            '    implementation(libs.firebase.auth.ktx)',
+            '    // Testing',
+            '    testImplementation(libs.junit)',
+            '    testImplementation(libs.mockito.kotlin)',
+            '    androidTestImplementation(libs.androidx.espresso.core)',
+            '}',
+        ],
+        'code-experience': [
+            '$ git log --oneline --all',
+            '',
+            'a3f9d12 feat: implement dynamic dark/light theming',
+            'b7e2c45 fix: resolve HMI layout scaling on 15-inch display',
+            'd1a8f93 test: add unit tests with JUnit + Mockito (90% coverage)',
+            'e4b2109 feat: build AI tutoring module with Groq LLaMA 4',
+            'f8c3d76 feat: Canvas-based concept map with gesture controls',
+            '29a1e55 feat: multi-language STT/TTS support (EN/HI/KN/TE)',
+            '8b4f012 fix: Google Credential Manager auth flow edge case',
+            '9d7e334 feat: responsive website for non-profit org',
+            'c2a5801 chore: SEO optimization — organic traffic +25%',
+            '',
+            '$ git branch',
+            '* main',
+            '  feat/automotive-hmi',
+            '  feat/ai-learning-platform',
+            '  hotfix/theme-config-change',
+            '',
+            '$ git diff HEAD~1 --stat',
+            ' app/src/main/java/...MainActivity.kt | 48 ++++----',
+            ' app/src/main/res/layout/...xml      | 120 +++++++++',
+            ' app/src/test/...ViewModelTest.kt    | 92 +++++++',
+            ' 3 files changed, 248 insertions(+), 12 deletions(-)',
+        ],
+        'code-projects': [
+            '<!-- AndroidManifest.xml -->',
+            '<manifest xmlns:android="http://schemas.android.com/apk/res/android"',
+            '    package="com.shubhash.portfolio">',
+            '',
+            '    <uses-permission android:name="android.permission.INTERNET"/>',
+            '    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>',
+            '',
+            '    <application',
+            '        android:name=".App"',
+            '        android:label="@string/app_name"',
+            '        android:theme="@style/Theme.Material3.Dark"',
+            '        android:supportsRtl="true">',
+            '',
+            '        <activity android:name=".MainActivity"',
+            '            android:exported="true">',
+            '            <intent-filter>',
+            '                <action android:name="android.intent.action.MAIN"/>',
+            '                <category android:name="android.intent.category.LAUNCHER"/>',
+            '            </intent-filter>',
+            '        </activity>',
+            '',
+            '    </application>',
+            '</manifest>',
+            '',
+            '// Project stats',
+            'val projects = mapOf(',
+            '    "ExpenseTracker"    to Stars(1),',
+            '    "AILearningAssist"  to Stars(3),',
+            '    "WeatherApp"        to Stars(2),',
+            '    "ECommerce"         to Stars(1),',
+            '    "TaskManagerPro"    to Stars(0),',
+            '    "BankingSoftware"   to Stars(1)',
+            ')',
+        ],
+        'code-contact': [
+            '// ContactActivity.kt',
+            'class ContactActivity : AppCompatActivity() {',
+            '',
+            '    private val email = "subhashsingh2059@gmail.com"',
+            '    private val location = "Bangalore, India"',
+            '    private val available = true',
+            '',
+            '    fun sendMessage(msg: Message): Response {',
+            '        return if (available) {',
+            '            inbox.add(msg)',
+            '            Response.success("I will reply soon!")',
+            '        } else {',
+            '            Response.error("Try again later")',
+            '        }',
+            '    }',
+            '}',
+            '',
+            '// HTTP Response from API',
+            '{',
+            '  "status": 200,',
+            '  "developer": {',
+            '    "name": "Shubhash Singh",',
+            '    "available": true,',
+            '    "openTo": ["Android", "Kotlin", "Java"],',
+            '    "response_time": "< 24h",',
+            '    "email": "subhashsingh2059@gmail.com",',
+            '    "location": "Bangalore, IN"',
+            '  }',
+            '}',
+        ],
+    };
+
+    Object.entries(sections).forEach(([id, lines]) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const text = lines.join('\n');
+        el.textContent = text + '\n\n' + text; // doubled for seamless loop
+    });
 }
 
 // ===== NAVBAR =====
@@ -655,6 +932,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Theme toggle
     document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+    // Android enhancements
+    initRipples();
+    initHeroCode();
+    initSectionCodeBgs();
 
     // Initialize components
     initNavbar();
